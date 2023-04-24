@@ -19,6 +19,9 @@ function displayBooks() {
     const removeBtn = document.createElement('button');
     removeBtn.innerText = 'Remove';
     // Listen for the remove event
+    removeBtn.onclick = () => {
+      removeBook(index);
+    };
     bookList.appendChild(title);
     bookList.appendChild(author);
     bookList.appendChild(removeBtn);
@@ -47,6 +50,11 @@ addBtn.onclick = () => {
 };
 
 // Remove the targeted book from the collection
+function removeBook(index) {
+  books.splice(index, 1);
+  localStorage.setItem('books', JSON.stringify(books));
+  displayBooks();
+}
 
 // Display existing book on page load
 displayBooks();
