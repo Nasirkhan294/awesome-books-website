@@ -7,21 +7,16 @@ const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const addBtn = document.querySelector('#add-btn');
 const errorMsg = document.querySelector('#error-msg');
+const removeBtn = document.querySelector('#remove-btn');
 
 // Display existing books in the collection
 function displayBooks() {
   bookList.innerHTML = '';
-  books.forEach((book, index) => {
+  books.forEach((book) => {
     const title = document.createElement('p');
     const author = document.createElement('p');
     title.textContent = book.title;
     author.textContent = book.author;
-    const removeBtn = document.createElement('button');
-    removeBtn.innerText = 'Remove';
-    // Listen for the remove event
-    removeBtn.onclick = () => {
-      removeBook(index);
-    };
     bookList.appendChild(title);
     bookList.appendChild(author);
     bookList.appendChild(removeBtn);
@@ -55,6 +50,11 @@ function removeBook(index) {
   localStorage.setItem('books', JSON.stringify(books));
   displayBooks();
 }
+
+// Listen for the remove event
+removeBtn.onclick = (index) => {
+  removeBook(index);
+};
 
 // Display existing book on page load
 displayBooks();
