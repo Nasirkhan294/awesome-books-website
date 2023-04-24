@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Awesome Books Website</title>
-</head>
-<body>
-	<h1>Awesome Books</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books Website</title>
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Awesome Books</h1>
+    <div id="book-list"></div>
+    <hr />
+    <form>
+      <input type="text" id="title" placeholder="Title" />
+      <input type="text" id="author" placeholder="Author" />
+      <button type="button" id="add-btn">Add</button>
+	  <span id="error-msg">Please enter both title and author.</span>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
 </html>
