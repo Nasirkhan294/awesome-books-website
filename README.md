@@ -29,7 +29,7 @@
 
 # 📖 Converge and Create <a name="about-project"></a>
 
-**Converge and Create:** Converge and Create embodies the concept of uniting diverse ideas, perspectives, and individuals to spark innovation and bring new creations to life. This project celebrates the power of collaboration and highlights the importance of inclusivity in the creative process. Through the convergence of varied viewpoints and talents, we aim to inspire groundbreaking ideas and foster a culture of creativity and teamwork.
+**Awesome Books Website:** is a software that helps you add and remove your favorite books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,7 +44,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- [X] **HTML Skeleton**
+- [X] **Basic HTML**
 - [X] **Plain JavaScript**
 - [X] **Coming Soon**
 
