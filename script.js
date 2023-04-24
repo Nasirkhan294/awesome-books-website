@@ -1,60 +1,59 @@
-// check if there is already data in local storage
-const books = JSON.parse(localStorage.getItem('books') || []);
+// Initialize books array from localStorage or empty array
+let books = JSON.parse(localStorage.getItem('books')) || [];
 
-// Global variables
-const bookList = document.querySelector('#book-list');
-const titleInput = document.querySelector('#title');
-const authorInput = document.querySelector('#author');
-const addBtn = document.querySelector('#add-btn');
-const errorMsg = document.querySelector('#error-msg');
-const removeBtn = document.querySelector('#remove-btn');
-
-// Display existing books in the collection
+// Function to display all books in the collection on the page
 function displayBooks() {
+  const bookList = document.getElementById('book-list');
   bookList.innerHTML = '';
-  books.forEach((book) => {
-    const title = document.createElement('p');
-    const author = document.createElement('p');
-    title.textContent = book.title;
-    author.textContent = book.author;
-    bookList.appendChild(title);
-    bookList.appendChild(author);
-    bookList.appendChild(removeBtn);
+  books.forEach((book, index) => {
+    const bookDiv = document.createElement('div');
+    bookDiv.innerHTML = `
+      <p>Title: ${book.title}</p>
+      <p>Author: ${book.author}</p>
+      <button type="button" class="remove-btn" data-index="${index}">Remove</button>
+    `;
+    bookList.appendChild(bookDiv);
   });
 }
 
-// Add a new book to the collection
-function addBook() {
-  const title = titleInput.value;
-  const author = authorInput.value;
-  if (title === '' || author === '') {
-    errorMsg.style.display = 'block';
-    return;
-  }
-
+// Function to add a new book to the collection
+function addBook(title, author) {
   books.push({ title, author });
   localStorage.setItem('books', JSON.stringify(books));
   displayBooks();
-  titleInput.value = '';
-  authorInput.value = '';
 }
 
-// Listen for the click event when user add the book
-addBtn.onclick = () => {
-  addBook();
-};
-
-// Remove the targeted book from the collection
+// Function to remove a book from the collection
 function removeBook(index) {
-  books.splice(index, 1);
+  books = books.filter((book, i) => i !== index);
   localStorage.setItem('books', JSON.stringify(books));
   displayBooks();
 }
 
-// Listen for the remove event
-removeBtn.onclick = (index) => {
-  removeBook(index);
+// Event listener for Add button
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', () => {
+  const titleInput = document.getElementById('title');
+  const authorInput = document.getElementById('author');
+  const errorMsg = document.getElementById('error-msg');
+  if (titleInput.value.trim() === '' || authorInput.value.trim() === '') {
+    errorMsg.style.display = 'block';
+  } else {
+    addBook(titleInput.value.trim(), authorInput.value.trim());
+    titleInput.value = '';
+    authorInput.value = '';
+    errorMsg.style.display = 'none';
+  }
+});
+
+// Event listener for Remove button
+const bookList = document.getElementById('book-list');
+bookList.onclick = (event) => {
+  if (event.target.classList.contains('remove-btn')) {
+    const index = Number(event.target.dataset.index);
+    removeBook(index);
+  }
 };
 
-// Display existing book on page load
+// Initial display of books on page load
 displayBooks();
