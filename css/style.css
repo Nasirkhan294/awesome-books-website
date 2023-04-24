@@ -23,6 +23,7 @@ form {
   align-items: center;
   flex-direction: column;
   margin-top: 2em;
+  margin-right: 3.5em;
 }
 
 input {
@@ -35,7 +36,20 @@ button {
   align-items: center;
 }
 
+#add-btn {
+  align-self: flex-start;
+}
+
 #error-msg {
   display: none;
   color: #f00;
+  margin-top: 1em;
+}
+
+#book-list {
+  margin: 1em 8.5em 0 0;
+}
+
+p {
+  margin: 0.5em 0;
 }
