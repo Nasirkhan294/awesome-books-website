@@ -45,8 +45,8 @@
 ### Key Features <a name="key-features"></a>
 
 - [X] **Basic HTML**
+- [X] **Basic Style**
 - [X] **Plain JavaScript**
-- [X] **Coming Soon**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
