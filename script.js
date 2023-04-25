@@ -9,6 +9,7 @@ class BookCollection {
     this.errorMsg = document.getElementById('error-msg');
     this.addBtn = document.getElementById('add-btn');
 
+    // Display the existing books
     this.displayBooks();
     // Event listener for Add button
     this.addBtn.addEventListener('click', this.handleAddBook.bind(this));
@@ -16,7 +17,7 @@ class BookCollection {
     this.bookList.addEventListener('click', this.handleRemoveBook.bind(this));
   }
 
-  // Function to display all books in the collection on the page
+  // Method to display all books in the collection on the page
   displayBooks() {
     this.bookList.innerHTML = '';
     this.books.forEach((book, index) => {
@@ -30,20 +31,21 @@ class BookCollection {
     });
   }
 
-  // Function to add a new book to the collection
+  // Method to add a new book to the collection
   addBook(title, author) {
     this.books.push({ title, author });
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
 
-  // Function to remove a book from the collection
+  // Method to remove a book from the collection
   removeBook(index) {
     this.books = this.books.filter((book, i) => i !== index);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
 
+  // Method to listen for addBook click event
   handleAddBook() {
     if (this.titleInput.value.trim() === '' || this.authorInput.value.trim() === '') {
       this.errorMsg.style.display = 'block';
@@ -55,6 +57,7 @@ class BookCollection {
     }
   }
 
+  // Method to listen for removeBook click event
   handleRemoveBook(event) {
     if (event.target.classList.contains('remove-btn')) {
       const index = Number(event.target.dataset.index);
