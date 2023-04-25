@@ -37,7 +37,7 @@ button {
 }
 
 #add-btn {
-  align-self: flex-start;
+  align-self: flex-end;
 }
 
 #error-msg {
@@ -52,4 +52,8 @@ button {
 
 p {
   margin: 0.5em 0;
+}
+
+h2 {
+  margin-bottom: 0.5em;
 }
