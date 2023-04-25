@@ -7,7 +7,7 @@ function displayBooks() {
   bookList.innerHTML = '';
   books.forEach((book, index) => {
     const bookDiv = document.createElement('div');
-    bookDiv.classList.add("book")
+    bookDiv.classList.add('book');
     bookDiv.innerHTML = `
       <p class="title">Title: ${book.title}</p>
       <p class="author">Author: ${book.author}</p>
