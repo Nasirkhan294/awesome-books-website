@@ -7,9 +7,10 @@ function displayBooks() {
   bookList.innerHTML = '';
   books.forEach((book, index) => {
     const bookDiv = document.createElement('div');
+    bookDiv.classList.add("book")
     bookDiv.innerHTML = `
-      <p>Title: ${book.title}</p>
-      <p>Author: ${book.author}</p>
+      <p class="title">Title: ${book.title}</p>
+      <p class="author">Author: ${book.author}</p>
       <button type="button" class="remove-btn" data-index="${index}">Remove</button>
     `;
     bookList.appendChild(bookDiv);
