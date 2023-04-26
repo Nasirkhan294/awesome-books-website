@@ -13,9 +13,11 @@
       <nav class="nav">
         <h3 class="logo">Awesome Books</h3>
         <ul class="nav-ul">
-          <li class="nav-li" id="li-1">List</li>
-          <li class="nav-li" id="li-2">Add new</li>
-          <li class="nav-li" id="li-3">Contact</li>
+          <li class="nav-li" id="list-li">List</li>
+          <li class="line">|</li>
+          <li class="nav-li" id="addnew-li">Add new</li>
+          <li class="line">|</li>
+          <li class="nav-li" id="contact-li">Contact</li>
         </ul>
       </nav>
       <p id="live-time"></p>
@@ -23,19 +25,37 @@
 
     <!-- Books section -->
     <main class="main-section">
-      <h1>All Awesome Books</h1>
+      <h2>All Awesome Books</h2>
       <div id="book-list"></div>
     </main>
-    <hr />
+    <!-- <hr /> -->
 
     <!-- form  -->
-    <form>
+    <form class="form hide-onload">
       <h2>Add a new book</h2>
       <input type="text" id="title" placeholder="Title" />
       <input type="text" id="author" placeholder="Author" />
       <button type="button" id="add-btn">Add</button>
     </form>
     <span id="error-msg">Please enter both title and author.</span>
+
+    <!-- contact section -->
+
+    <section class="contact hide-onload">
+      <h2>Contact Information</h2>
+      <p class="contact-para">
+        Do you have any question or just want to say "Hello" ? <br />
+        You can reach out to us!
+      </p>
+
+      <ul class="contact-details">
+        <li class="details">Our e-mail: mail@mail.com</li>
+        <li class="details">Our phone number: 002568444741</li>
+        <li class="details">
+          Our address: Street buvr main 22, 400405 City , Country
+        </li>
+      </ul>
+    </section>
 
     <!-- footer -->
     <footer class="footer">

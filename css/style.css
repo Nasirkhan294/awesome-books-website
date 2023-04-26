@@ -20,25 +20,21 @@ body {
 
 .logo {
   color: rgb(245, 109, 109);
+  margin-left: 20px;
 }
 
 .nav-ul {
-  width: 35%;
+  width: 25%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin-right: 10px;
 }
 
-.nav-li {
-  padding: 1px 23px;
-  border-right: 3px solid rgb(245, 109, 109);
-}
-
-#li-3 {
-  border: none;
-  margin-right: -5px;
+.line {
+  color: rgb(127, 154, 185);
 }
 
 #live-time {
@@ -52,6 +48,10 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 #book-list {
@@ -98,6 +98,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 input {
@@ -138,6 +139,23 @@ input {
 }
 
 #copyright {
-  margin-left: 20px;
+  margin-left: 40px;
   color: #fff;
+}
+
+/* contact information */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-para {
+  font-size: 20px;
+}
+
+.details {
+  margin: 7px;
 }
