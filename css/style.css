@@ -33,6 +33,10 @@ body {
   margin-right: 10px;
 }
 
+.nav-li {
+  color: #fff;
+}
+
 .line {
   color: rgb(127, 154, 185);
 }
@@ -158,4 +162,19 @@ input {
 
 .details {
   margin: 7px;
+}
+
+/* to hide and show */
+
+.hide {
+  display: none;
+}
+
+.hide-onload {
+  display: none;
+}
+
+.active {
+  color: red;
+  /* border-bottom: 2px solid #fff; */
 }
