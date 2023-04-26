@@ -8,11 +8,27 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="nav">
+        <h3 class="logo">Awesome Books</h3>
+        <ul class="nav-ul">
+          <li class="nav-li" id="li-1">List</li>
+          <li class="nav-li" id="li-2">Add new</li>
+          <li class="nav-li" id="li-3">Contact</li>
+        </ul>
+      </nav>
+      <p id="live-time"></p>
+    </header>
+
+    <!-- Books section -->
     <main class="main-section">
       <h1>All Awesome Books</h1>
       <div id="book-list"></div>
     </main>
     <hr />
+
+    <!-- form  -->
     <form>
       <h2>Add a new book</h2>
       <input type="text" id="title" placeholder="Title" />
@@ -21,6 +37,12 @@
     </form>
     <span id="error-msg">Please enter both title and author.</span>
 
+    <!-- footer -->
+    <footer class="footer">
+      <p id="copyright">©️ Copyright @2020</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
