@@ -11,10 +11,11 @@ body {
   height: 100vh;
 }
 
-header, footer {
+header,
+footer {
   background-color: rgb(127, 154, 185);
   color: #fff;
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
 }
 
 nav {
@@ -30,7 +31,6 @@ nav ul {
   width: 20%;
   list-style: none;
 }
-
 
 a {
   text-decoration: none;
