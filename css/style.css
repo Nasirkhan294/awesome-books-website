@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   height: 100vh;
 }
 
@@ -39,21 +39,12 @@ a {
 }
 
 a:hover {
-  color: #676565;
-  border-bottom: 2px solid #f00;
+  color: rgb(108, 95, 95);
   padding-bottom: 8px;
 }
 
 .logo {
   font-size: 25px;
-}
-
-.main-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 85vh;
 }
 
 #date {
@@ -64,10 +55,23 @@ a:hover {
   color: rgb(127, 154, 185);
 }
 
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 30px;
+}
+
 #book-list {
   width: 40%;
   padding: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +85,7 @@ a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .title {
@@ -108,6 +113,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 140px;
 }
 
 input {
@@ -122,7 +128,7 @@ input {
   background-color: rgb(42, 143, 232);
   border-radius: 4px;
   border: none;
-  align-self: flex-end;
+  margin-left: 7.25rem;
 }
 
 #error-msg {
@@ -133,8 +139,44 @@ input {
   color: red;
 }
 
+/* contact information */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.contact-para {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.details {
+  margin: 7px;
+}
+
+/* to hide and show */
+
+.hide {
+  display: none;
+}
+
+.hide-onload {
+  display: none;
+}
+
+.active {
+  color: rgb(245, 68, 68);
+}
+
 footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   font-size: 20px;
+  position: fixed;
+  bottom: 0;
 }

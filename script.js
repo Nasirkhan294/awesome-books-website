@@ -54,7 +54,10 @@ class BookCollection {
 
   // Method to listen for addBook click event
   handleAddBook() {
-    if (this.titleInput.value.trim() === '' || this.authorInput.value.trim() === '') {
+    if (
+      this.titleInput.value.trim() === ''
+      || this.authorInput.value.trim() === ''
+    ) {
       this.errorMsg.style.display = 'block';
     } else {
       this.addBook(this.titleInput.value.trim(), this.authorInput.value.trim());
