@@ -1,5 +1,3 @@
-// to hide and show
-
 const main = document.querySelector('.main-section');
 const form = document.querySelector('.form');
 const contact = document.querySelector('.contact');
@@ -8,35 +6,31 @@ const lists = document.getElementById('list-li');
 const addnew = document.getElementById('addnew-li');
 const cPage = document.getElementById('contact-li');
 
-lists.addEventListener('click', () => {
-  form.classList.add('hide');
-  contact.classList.add('hide');
-  main.classList.remove('hide');
+function toggleSections(link1, link2, link3) {
+  link1.classList.remove('hide');
+  link2.classList.add('hide');
+  link3.classList.add('hide');
+}
 
-  lists.classList.add('active');
-  cPage.classList.remove('active');
-  addnew.classList.remove('active');
+function toggleActive(link1, link2, link3) {
+  link1.classList.add('active');
+  link2.classList.remove('active');
+  link3.classList.remove('active');
+}
+
+lists.addEventListener('click', () => {
+  toggleSections(main, form, contact);
+  toggleActive(lists, cPage, addnew);
 });
 
 addnew.addEventListener('click', () => {
-  main.classList.add('hide');
-  contact.classList.add('hide');
-  form.classList.remove('hide');
-
+  toggleSections(form, main, contact);
   form.classList.remove('hide-onload');
-
-  addnew.classList.add('active');
-  lists.classList.remove('active');
-  cPage.classList.remove('active');
+  toggleActive(addnew, lists, cPage);
 });
 
 cPage.addEventListener('click', () => {
-  form.classList.add('hide');
-  contact.classList.remove('hide');
-  main.classList.add('hide');
+  toggleSections(contact, main, form);
   contact.classList.remove('hide-onload');
-
-  cPage.classList.add('active');
-  lists.classList.remove('active');
-  addnew.classList.remove('active');
+  toggleActive(cPage, lists, addnew);
 });
