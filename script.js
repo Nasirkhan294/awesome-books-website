@@ -8,6 +8,7 @@ class BookCollection {
     this.authorInput = document.getElementById('author');
     this.errorMsg = document.getElementById('error-msg');
     this.addBtn = document.getElementById('add-btn');
+    this.date = document.getElementById('date');
 
     // Display the existing books
     this.displayBooks();
@@ -15,6 +16,8 @@ class BookCollection {
     this.addBtn.addEventListener('click', this.handleAddBook.bind(this));
     // Event listener for Remove button
     this.bookList.addEventListener('click', this.handleRemoveBook.bind(this));
+    // Event Listener for onload event
+    this.date.addEventListener('onload', this.checkDate().bind(this));
   }
 
   // Method to display all books in the collection on the page
@@ -29,6 +32,10 @@ class BookCollection {
       `;
       this.bookList.appendChild(bookDiv);
     });
+  }
+
+  checkDate() {
+    this.date.innerHTML = new Date().toUTCString();
   }
 
   // Method to add a new book to the collection
@@ -47,7 +54,10 @@ class BookCollection {
 
   // Method to listen for addBook click event
   handleAddBook() {
-    if (this.titleInput.value.trim() === '' || this.authorInput.value.trim() === '') {
+    if (
+      this.titleInput.value.trim() === ''
+      || this.authorInput.value.trim() === ''
+    ) {
       this.errorMsg.style.display = 'block';
     } else {
       this.addBook(this.titleInput.value.trim(), this.authorInput.value.trim());

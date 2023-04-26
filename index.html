@@ -8,19 +8,68 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="main-section">
-      <h1>All Awesome Books</h1>
-      <div id="book-list"></div>
+    <header>
+      <nav>
+        <div class="logo-wrapper">
+          <p class="logo">Awesome Books</p>
+        </div>
+        <ul>
+          <li><a class="nav-li active" id="list-li" href="#list">List</a></li>
+          <li>
+            <a class="nav-li" id="addnew-li" href="#add-book">Add Book</a>
+          </li>
+          <li><a class="nav-li" id="contact-li" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="date"></div>
+    </header>
+
+    <!-- main-section -->
+
+    <main>
+      <!-- book section -->
+
+      <section class="main-section">
+        <h2>All Awesome Books</h2>
+        <div id="book-list"></div>
+      </section>
+
+      <!-- form -->
+
+      <form class="form hide-onload">
+        <h2>Add a new book</h2>
+        <input type="text" id="title" placeholder="Title" />
+        <input type="text" id="author" placeholder="Author" />
+        <button type="button" id="add-btn">Add</button>
+      </form>
+      <span id="error-msg">Please enter both title and author.</span>
+
+      <!-- contact section -->
+
+      <section class="contact hide-onload">
+        <h2>Contact Information</h2>
+        <p class="contact-para">
+          Do you have any question or just want to say "Hello" ? <br />
+          You can reach out to us!
+        </p>
+
+        <ul class="contact-details">
+          <li class="details">Our e-mail: mail@mail.com</li>
+          <li class="details">Our phone number: 002568444741</li>
+          <li class="details">
+            Our address: Street buvr main 22, 400405 City , Country
+          </li>
+        </ul>
+      </section>
     </main>
-    <hr />
-    <form>
-      <h2>Add a new book</h2>
-      <input type="text" id="title" placeholder="Title" />
-      <input type="text" id="author" placeholder="Author" />
-      <button type="button" id="add-btn">Add</button>
-    </form>
-    <span id="error-msg">Please enter both title and author.</span>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <p id="copyright">©️ Copyright @2020</p>
+    </footer>
 
     <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
