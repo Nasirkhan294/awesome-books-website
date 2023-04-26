@@ -44,9 +44,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- [X] **Basic HTML**
-- [X] **Basic Style**
-- [X] **Plain JavaScript**
+- [X] **Single Page App**
+- [X] **Add and Remove Functionality**
+- [X] **Medium Fidelity Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
