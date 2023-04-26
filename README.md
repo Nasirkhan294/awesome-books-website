@@ -29,7 +29,7 @@
 
 # 📖 Converge and Create <a name="about-project"></a>
 
-**Awesome Books Website:** is a software that helps you add and remove your favorite books.
+**Awesome Books Website:** The repository contains the source code for the "Awesome Books Website," a user-friendly application designed to allow users to efficiently manage their favorite books by adding and removing them as desired.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,14 +39,13 @@
     <li>JavaScript</li>
   </ul>
 
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- [X] **Single Page App**
-- [X] **Add and Remove Functionality**
-- [X] **Medium Fidelity Design**
+- [x] **Single Page App**
+- [x] **Add and Remove Functionality**
+- [x] **Medium Fidelity Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,7 +67,6 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-
 ```
    ssh code:
    git@github.com:Nasirkhan294/awesome-books-website.git
@@ -86,17 +84,6 @@ Clone this repository to your desired folder:
 ### Deployment
 
 You can deploy this project using **Github-Pages**. In order to make your project live on Github, you'll want to push your updated repo by using these commands:
-
-
-```
-git add --all or git add .
-
-```
-
-```
-git commit -m "your commit message"
-
-```
 
 ```
 git add --all or git add .
@@ -165,15 +152,16 @@ To all the individuals whose creativity and dedication inspired the codebase, I 
 
 - **Can I fork and reuse this repository?**
 
- Absolutely! Please feel free to fork and reuse this repository for your own projects.
+Absolutely! Please feel free to fork and reuse this repository for your own projects.
 
 - **Is it okay to improve this repository? Will my changes be accepted?**
 
- Definitely! We welcome any improvements or new ideas you may have. If your changes are good and align with the project's goals, we would be happy to accept them.
+Definitely! We welcome any improvements or new ideas you may have. If your changes are good and align with the project's goals, we would be happy to accept them.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
+
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
