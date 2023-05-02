@@ -27,7 +27,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Converge and Create <a name="about-project"></a>
+# 📖 Awesome Books Website <a name="about-project"></a>
 
 **Awesome Books Website:** The repository contains the source code for the "Awesome Books Website," a user-friendly application designed to allow users to efficiently manage their favorite books by adding and removing them as desired.
 
